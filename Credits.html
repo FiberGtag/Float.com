@@ -1,0 +1,154 @@
+                                                                                                                      
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credits - float.lol</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: white; /* White text color */
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+ 
+    /* Content styling */
+    .content {
+      position: relative;
+      z-index: 1; /* Ensure content is above the background */
+      text-align: center;
+      margin-top: 50px; /* Move content further down */
+      width: 100%;
+    }
+ 
+    /* Credits section layout */
+    .credits-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+    }
+ 
+    .credits-section {
+      width: 45%;
+      text-align: center;
+    }
+ 
+    /* Style for title text */
+    h1 {
+      font-size: 32px; /* Larger size for credits title */
+      color: blue; /* Blue color for the "Credits" title */
+      position: fixed;
+      top: 10px; /* Move it closer to the top */
+      left: 50%;
+      transform: translateX(-50%); /* Center the title horizontally */
+    }
+ 
+    .credits-section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: blue;
+    }
+ 
+    .credits-section p {
+      font-size: 10px; /* Smaller text for credits */
+      color: white; /* White text for credits */
+    }
+ 
+    /* Button styling */
+    .button {
+      position: fixed;
+      color: white;
+      text-decoration: none;
+      background-color: blue; /* Blue background for buttons */
+      padding: 5px 10px; /* Smaller padding for a tinier button */
+      border-radius: 5px;
+      font-size: 12px; /* Smaller font size for Back button */
+      z-index: 2; /* Make sure button is on top of snowflakes */
+    }
+ 
+    /* Back button on left */
+    #back {
+      top: 10px;
+      left: 10px;
+    }
+ 
+    /* Snowflake particle styles */
+    .snowflake {
+      position: absolute;
+      top: 0px; /* Start at the very top of the page */
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+ 
+    /* Falling animation for snowflakes */
+    @keyframes fall {
+      0% {
+        transform: translateY(0); /* Start at the position */
+      }
+      100% {
+        transform: translateY(100vh); /* Move particles to the bottom */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Content -->
+  <div class="content">
+    <div class="credits-container">
+      <!-- Menu Credits Section -->
+      <div class="credits-section">
+        <h2>Menu Credits</h2>
+        <p>Design by [Menu Designer Name]</p>
+        <p>UI/UX by [UI Designer Name]</p>
+        <p>Additional Credits: [Other Menu Contributors]</p>
+      </div>
+ 
+      <!-- Website Credits Section -->
+      <div class="credits-section">
+        <h2>Website Credits</h2>
+        <p>Development by [Developer Name]</p>
+        <p>Design by [Website Designer Name]</p>
+        <p>Additional Credits: [Other Website Contributors]</p>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Back Button -->
+  <a id="back" href="index.html" class="button">Back</a>
+ 
+  <!-- Snowflakes Particles -->
+  <script>
+    // Function to create snowflakes (particles)
+    function createSnowflakes() {
+      const numberOfSnowflakes = 100; // Number of particles
+      const body = document.body;
+ 
+      for (let i = 0; i < numberOfSnowflakes; i++) {
+        let snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+ 
+        // Randomize position and animation duration for each particle
+        snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Falling speed (2s to 5s)
+ 
+        // Append to the body
+        body.appendChild(snowflake);
+      }
+    }
+ 
+    // Create snowflakes when the page loads
+    window.onload = createSnowflakes;
+  </script>
+</body>
+</html>                                                                                                 

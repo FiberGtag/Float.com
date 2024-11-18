@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float.lol</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: white; /* White text color */
+      overflow: hidden;
+      position: relative;
+    }
+ 
+    /* Content styling */
+    .content {
+      position: relative;
+      z-index: 1; /* Ensure content is above the background */
+      text-align: center;
+      margin-top: 20%;
+    }
+    .content h1 {
+      font-size: 64px;
+      margin: 0;
+      color: blue; /* Blue text for the title */
+    }
+ 
+    /* Button styling */
+    .button {
+      position: fixed;
+      color: white;
+      text-decoration: none;
+      background-color: blue; /* Blue background for buttons */
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      z-index: 2; /* Make sure buttons are on top of snowflakes */
+    }
+    .button:hover {
+      background-color: darkblue; /* Darker blue on hover */
+    }
+ 
+    #discord {
+      top: 10px;
+      left: 10px;
+      font-size: 14px; /* Smaller font size for Discord button */
+    }
+    #credits {
+      top: 10px;
+      right: 10px; /* Same position as Discord button but on the right */
+      font-size: 14px; /* Same font size as Discord button */
+    }
+ 
+    /* Snowflake particle styles */
+    .snowflake {
+      position: absolute;
+      top: 0px; /* Start at the very top of the page */
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+ 
+    /* Falling animation for snowflakes */
+    @keyframes fall {
+      0% {
+        transform: translateY(0); /* Start at the position */
+      }
+      100% {
+        transform: translateY(100vh); /* Move particles to the bottom */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Content -->
+  <div class="content">
+    <h1>float.lol</h1>
+  </div>
+ 
+  <!-- Discord Button (Updated Link) -->
+  <a id="discord" href="https://discord.gg/JcAjd32Xjw" class="button" target="_blank">Discord</a>
+ 
+  <!-- Credits Button -->
+  <a id="credits" href="credits.html" class="button">Credits</a>
+ 
+  <!-- Snowflakes Particles -->
+  <script>
+    // Function to create snowflakes (particles)
+    function createSnowflakes() {
+      const numberOfSnowflakes = 100; // Number of particles
+      const body = document.body;
+ 
+      for (let i = 0; i < numberOfSnowflakes; i++) {
+        let snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+ 
+        // Randomize position and animation duration for each particle
+        snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Falling speed (2s to 5s)
+ 
+        // Append to the body
+        body.appendChild(snowflake);
+      }
+    }
+ 
+    // Create snowflakes when the page loads
+    window.onload = createSnowflakes;
+  </script>
+</body>
+</html>
