@@ -3,114 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>float.lol</title>
+  <title>Float Cheat Menu</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000; /* Black background */
-      color: white; /* White text color */
-      overflow: hidden;
-      position: relative;
     }
- 
-    /* Content styling */
-    .content {
-      position: relative;
-      z-index: 1; /* Ensure content is above the background */
-      text-align: center;
-      margin-top: 20%;
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background-color: #111;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #333;
     }
-    .content h1 {
-      font-size: 64px;
-      margin: 0;
-      color: blue; /* Blue text for the title */
-    }
- 
-    /* Button styling */
-    .button {
-      position: fixed;
-      color: white;
+
+    .nav-button {
       text-decoration: none;
-      background-color: blue; /* Blue background for buttons */
+      color: #fff;
       padding: 10px 20px;
+      background-color: #222;
       border-radius: 5px;
-      font-size: 18px;
-      z-index: 2; /* Make sure buttons are on top of snowflakes */
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    .button:hover {
-      background-color: darkblue; /* Darker blue on hover */
+
+    .nav-button:hover {
+      background-color: #555;
+      transform: scale(1.1);
     }
- 
-    #discord {
-      top: 10px;
-      left: 10px;
-      font-size: 14px; /* Smaller font size for Discord button */
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #111, #222);
     }
-    #credits {
-      top: 10px;
-      right: 10px; /* Same position as Discord button but on the right */
-      font-size: 14px; /* Same font size as Discord button */
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
     }
- 
-    /* Snowflake particle styles */
-    .snowflake {
-      position: absolute;
-      top: 0px; /* Start at the very top of the page */
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: fall linear infinite;
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+      margin-bottom: 30px;
     }
- 
-    /* Falling animation for snowflakes */
-    @keyframes fall {
-      0% {
-        transform: translateY(0); /* Start at the position */
-      }
-      100% {
-        transform: translateY(100vh); /* Move particles to the bottom */
-      }
+
+    .cta-button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+      transform: translateY(-5px);
     }
   </style>
 </head>
 <body>
-  <!-- Content -->
-  <div class="content">
-    <h1>float.lol</h1>
-  </div>
- 
-  <!-- Discord Button (Updated Link) -->
-  <a id="discord" href="https://discord.gg/Rgr2E3F4" class="button" target="_blank">Discord</a>
- 
-  <!-- Credits Button -->
-  <a id="credits" href="credits.html" class="button">Credits</a>
- 
-  <!-- Snowflakes Particles -->
-  <script>
-    // Function to create snowflakes (particles)
-    function createSnowflakes() {
-      const numberOfSnowflakes = 100; // Number of particles
-      const body = document.body;
- 
-      for (let i = 0; i < numberOfSnowflakes; i++) {
-        let snowflake = document.createElement("div");
-        snowflake.classList.add("snowflake");
- 
-        // Randomize position and animation duration for each particle
-        snowflake.style.left = `${Math.random() * 100}vw`; // Random horizontal position
-        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Falling speed (2s to 5s)
- 
-        // Append to the body
-        body.appendChild(snowflake);
-      }
-    }
- 
-    // Create snowflakes when the page loads
-    window.onload = createSnowflakes;
-  </script>
+  <header class="navbar">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="info.html" class="nav-button">Info</a>
+    <a href="credits.html" class="nav-button">Credits</a>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Float</h1>
+    <p>Your ultimate cheat menu solution.</p>
+    <a href="https://discord.gg/bpehk7Tc" target="_blank" class="cta-button">Join Our Discord</a>
+  </section>
 </body>
 </html>
