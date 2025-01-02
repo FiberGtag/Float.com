@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #111; /* Updated background color */
+      background-color: #111;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -17,24 +17,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      margin: 20px auto;
       padding: 0 20px;
-      min-height: 70vh; /* Keeps space for the content */
-      justify-content: space-between;
+      max-width: 800px;
     }
 
-    .content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    h1 {
+      color: #00ff00;
+      margin-bottom: 30px;
     }
 
     .credit-box {
-      background-color: #222; /* Updated background color for credit boxes */
+      background-color: #222;
       color: #fff;
       padding: 20px;
       margin: 10px;
       border-radius: 10px;
-      width: 250px;
+      width: 80%;
+      max-width: 400px; /* Default width for mobile */
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     }
@@ -46,31 +46,48 @@
 
     .credit-box p {
       font-size: 16px;
-      color: #bbb; /* Slightly lighter color for text inside the boxes */
+      color: #bbb;
     }
 
     .return-button {
       text-decoration: none;
       color: #fff;
-      background-color: #555; /* Button background color */
+      background-color: #555;
       padding: 15px 30px;
       border-radius: 5px;
       font-weight: bold;
       font-size: 18px;
-      margin-top: 30px; /* Increased margin to move the button up */
+      margin-top: 30px;
       transition: background-color 0.3s ease;
     }
 
     .return-button:hover {
-      background-color: #808080; /* Lighter gray for hover effect */
+      background-color: #808080;
     }
 
     .footer {
       padding: 20px;
       text-align: center;
       color: #fff;
-      background-color: #000; /* Footer background color changed to black */
-      margin-top: 40px; /* Added margin to give space between the button and footer */
+      background-color: #000;
+      margin-top: 40px;
+    }
+
+    /* Media query for large screens (PC/Desktop) */
+    @media (min-width: 1024px) {
+      .content {
+        max-width: 1000px; /* Increase width for larger screens */
+      }
+
+      .credit-box {
+        width: 60%; /* Make boxes wider on PC */
+        max-width: 600px; /* Increase max width */
+      }
+
+      .return-button {
+        font-size: 20px; /* Larger button text on PC */
+        padding: 20px 40px;
+      }
     }
   </style>
 </head>
@@ -78,6 +95,7 @@
   <div class="content">
     <h1>Credits</h1>
 
+    <!-- Credit Boxes -->
     <div class="credit-box">
       <h3>FiberGT</h3>
       <p><strong>Role:</strong> Owner</p>
@@ -98,6 +116,7 @@
       <p><strong>Role:</strong> Special Thanks</p>
     </div>
 
+    <!-- Return Button -->
     <a href="index.html" class="return-button">Return to Home</a>
   </div>
 
