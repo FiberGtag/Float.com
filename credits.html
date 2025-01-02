@@ -11,6 +11,9 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure full screen height */
     }
 
     .content {
@@ -21,6 +24,7 @@
       padding: 0 20px;
       max-width: 1200px;
       width: 100%;
+      flex-grow: 1; /* Allow content to take up remaining space */
     }
 
     h1 {
@@ -60,7 +64,7 @@
       height: 80px;
       border-radius: 50%;
       margin-right: 20px;
-      border: 5px solid #bbb; /* Gray outline */
+      border: 5px solid #bbb;
     }
 
     .return-button {
@@ -85,6 +89,8 @@
       color: #fff;
       background-color: #000;
       margin-top: 40px;
+      width: 100%;
+      position: relative;
     }
 
     /* Media query for large screens (PC/Desktop) */
@@ -111,7 +117,6 @@
 
     <!-- Credit Boxes -->
     <div class="credit-box">
-      <!-- Profile Picture on the Left -->
       <img src="https://i.ibb.co/N1pDFF8/your-image.jpg" alt="FiberGT">
       <div>
         <h3>FiberGT</h3>
@@ -120,8 +125,7 @@
     </div>
 
     <div class="credit-box">
-      <!-- Profile Picture for the second box -->
-      <img src="https://i.ibb.co/4WpNzWq/second-image.jpg" alt="ThatGuy">
+      <img src="https://i.ibb.co/4WpNzWq/another-image.jpg" alt="ThatGuy">
       <div>
         <h3>ThatGuy</h3>
         <p><strong>Role:</strong> Co-Owner</p>
@@ -129,17 +133,15 @@
     </div>
 
     <div class="credit-box">
-      <!-- Profile Picture for the third box -->
-      <img src="https://i.ibb.co/FKypGQ8/new-image.jpg" alt="Developer">
+      <img src="https://i.ibb.co/FKypGQ8/third-image.jpg" alt="Developer">
       <div>
-        <h3>Developer</h3>
+        <h3>Developers</h3>
         <p><strong>Role:</strong> Developer</p>
       </div>
     </div>
 
     <div class="credit-box">
-      <!-- Profile Picture for the last box -->
-      <img src="https://i.ibb.co/nj2rDRd/final-image.jpg" alt="Community">
+      <img src="https://i.ibb.co/nj2rDRd/fourth-image.jpg" alt="Community">
       <div>
         <h3>Our Community</h3>
         <p><strong>Role:</strong> Special Thanks</p>
