@@ -28,7 +28,7 @@
       display: flex;
       gap: 20px;
       align-items: center;
-      margin-left: auto; /* Moves the nav buttons to the right */
+      margin-left: auto;
     }
 
     .nav-button {
@@ -47,23 +47,35 @@
     }
 
     .hero {
+      position: relative;
       height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #111, #222);
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     .hero h1 {
       font-size: 48px;
       margin-bottom: 20px;
+      z-index: 1;
     }
 
     .hero p {
       font-size: 20px;
       color: #ccc;
       margin-bottom: 30px;
+      z-index: 1;
     }
 
     .cta-button {
@@ -73,6 +85,7 @@
       padding: 15px 30px;
       border-radius: 5px;
       font-weight: bold;
+      z-index: 1;
     }
 
     .cta-button:hover {
@@ -83,6 +96,7 @@
       padding: 50px 20px;
       background-color: #222;
       text-align: center;
+      margin-top: 50px; /* Added margin-top to prevent overlap */
     }
 
     .why-choose-us h2 {
@@ -105,16 +119,15 @@
       flex-wrap: wrap;
     }
 
-    /* Gray Border */
     .feature {
       background-color: #333;
       color: #fff;
       padding: 30px;
-      border-radius: 20px; /* Increased border radius for rounded corners */
+      border-radius: 20px;
       width: 250px;
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      border: 5px solid #888; /* Gray border */
+      border: 5px solid #888;
     }
 
     .feature:hover {
@@ -138,21 +151,18 @@
       background-color: #111;
     }
 
-    /* Logo adjustment */
     .navbar img {
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      height: 60px; /* Increase the size of the logo */
+      height: 60px;
     }
   </style>
 </head>
 <body>
   <header class="navbar">
-    <!-- Logo Image -->
     <img src="https://i.ibb.co/c1yqxbM/your-image.png" alt="Float Logo">
-
     <div class="nav-buttons">
       <a href="index.html" class="nav-button">Home</a>
       <a href="info.html" class="nav-button">Info</a>
@@ -160,7 +170,9 @@
     </div>
   </header>
 
+  <!-- Hero Section with Particle Background -->
   <section class="hero">
+    <div id="particles-js"></div>
     <h1>Welcome to Float</h1>
     <p>Your ultimate cheat menu solution.</p>
     <a href="https://discord.gg/bpehk7Tc" target="_blank" class="cta-button">Join Our Discord</a>
@@ -195,5 +207,59 @@
   <section class="footer">
     <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 50,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
