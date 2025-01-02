@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #111; /* Same background color as Credits */
+      background-color: #111;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -83,8 +83,43 @@
       padding: 20px;
       text-align: center;
       color: #fff;
-      background-color: #000; /* Footer color now black */
-      margin-top: 40px; /* Space between the content and footer */
+      background-color: #000;
+      margin-top: 40px;
+    }
+
+    /* Media query for large screens (PC/Desktop) */
+    @media (min-width: 1024px) {
+      .content {
+        max-width: 1000px; /* Increase width for larger screens */
+      }
+
+      h1 {
+        font-size: 3rem; /* Larger heading for bigger screens */
+      }
+
+      .box {
+        width: 70%; /* Make boxes wider */
+        max-width: 600px;
+      }
+
+      .return-button {
+        font-size: 20px; /* Larger text for button */
+        padding: 20px 40px; /* Larger button for better visibility */
+      }
+
+      .footer {
+        font-size: 18px; /* Increase font size of the footer text */
+      }
+    }
+
+    /* FAQ Section Styling */
+    .faq h3 {
+      color: #00ff00;
+      margin-bottom: 10px;
+    }
+
+    .faq p {
+      color: #ccc;
     }
   </style>
 </head>
@@ -115,6 +150,23 @@
         <li>Put The Menu In Your Plugins Folder And Run Gorilla Tag</li>
         <li>Open The Menu By Clicking Y On Your Controller & To Open The GUI Click The Float Logo In The Top Left.</li>
       </ol>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="box faq">
+      <h2>FAQ</h2>
+
+      <h3>1. Where can I download the Float Menu?</h3>
+      <p>You can download the menu directly from our Official Discord server.</p>
+
+      <h3>2. What platforms are supported?</h3>
+      <p>The Float Menu currently supports Gorilla Tag on PC (Windows).</p>
+
+      <h3>3. Can I get banned for using the Float Menu?</h3>
+      <p>There’s always a risk when using cheats in online games. However, we work hard to make the menu undetectable to minimize risks.</p>
+
+      <h3>4. Who do I contact for support?</h3>
+      <p>You can reach out to our team through the support channel in the Official Discord server.</p>
     </div>
 
     <!-- Return Button -->
