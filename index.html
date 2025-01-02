@@ -16,15 +16,24 @@
 
     .navbar {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-start;
+      align-items: center;
       background-color: #111;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
+      padding: 20px 40px;
       border-bottom: 1px solid #333;
+      position: relative;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-left: auto; /* Moves the nav buttons to the right */
     }
 
     .nav-button {
+      display: flex;
+      align-items: center;
       text-decoration: none;
       color: #fff;
       padding: 10px 20px;
@@ -33,3 +42,167 @@
       font-size: 16px;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
+
+    .nav-button img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    .nav-button:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #111, #222);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+      transform: translateY(-5px);
+    }
+
+    .why-choose-us {
+      padding: 50px 20px;
+      background-color: #222;
+      text-align: center;
+    }
+
+    .why-choose-us h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us p {
+      font-size: 18px;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: scale(1.1);
+    }
+
+    .feature h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #111;
+    }
+
+    /* Logo adjustment */
+    .navbar img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60px; /* Increase the size of the logo */
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <!-- Logo Image -->
+    <img src="https://i.ibb.co/c1yqxbM/your-image.png" alt="Float Logo">
+
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-button">Home</a>
+      <a href="info.html" class="nav-button">Info</a>
+      <a href="credits.html" class="nav-button">Credits</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Float</h1>
+    <p>Your ultimate cheat menu solution.</p>
+    <a href="https://discord.gg/bpehk7Tc" target="_blank" class="cta-button">Join Our Discord</a>
+  </section>
+
+  <section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <p>
+      Float offers the most reliable and feature-packed cheat menu available. With years of experience
+      and a dedicated team, we ensure top-notch performance and seamless integration for your needs.
+    </p>
+    <div class="features">
+      <div class="feature">
+        <h3>Undetected</h3>
+        <p>Our menu remains undetected, giving you a secure and uninterrupted experience.</p>
+      </div>
+      <div class="feature">
+        <h3>Safety</h3>
+        <p>Built with top-tier security to protect your accounts and data at all times.</p>
+      </div>
+      <div class="feature">
+        <h3>Free</h3>
+        <p>Experience all the features without any hidden costs. Our cheat menu is completely free!</p>
+      </div>
+      <div class="feature">
+        <h3>Reliability</h3>
+        <p>We have a proven track record of providing dependable and consistent service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
+  </section>
+</body>
+</html>
