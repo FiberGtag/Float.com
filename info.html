@@ -7,10 +7,23 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
       margin: 0;
       padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensures particles are behind other elements */
     }
 
     .content {
@@ -19,53 +32,27 @@
       align-items: center;
       margin: 20px auto;
       padding: 0 20px;
-      max-width: 800px;
+      max-width: 1200px;
+      width: 100%;
+      flex-grow: 1;
     }
 
     h1 {
-      color: #fff; /* Changed to white */
+      color: #fff;
       margin-bottom: 30px;
     }
 
-    .box {
+    .info-box {
       background-color: #222;
       color: #fff;
       padding: 20px;
+      margin: 10px;
       border-radius: 10px;
-      margin: 20px 10px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       width: 80%;
-      max-width: 400px;
-      border: 5px solid #888; /* Gray border */
-    }
-
-    .box p {
-      margin: 10px 0;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .box .online {
-      color: #00ff00;
-    }
-
-    .box .undetected {
-      color: #00ff00;
-    }
-
-    ol {
-      text-align: left;
-      margin: 10px 0 20px;
-      padding-left: 20px;
-    }
-
-    ol li {
-      margin-bottom: 10px;
-    }
-
-    .faq h3, .faq p {
-      color: #fff; /* Ensures FAQ text is white */
+      max-width: 800px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      border: 5px solid #888;
+      text-align: center;
     }
 
     .return-button {
@@ -76,7 +63,7 @@
       border-radius: 5px;
       font-weight: bold;
       font-size: 18px;
-      margin-top: 20px;
+      margin-top: 30px;
       transition: background-color 0.3s ease;
     }
 
@@ -90,70 +77,38 @@
       color: #fff;
       background-color: #000;
       margin-top: 40px;
+      width: 100%;
+      position: relative;
     }
 
     /* Media query for large screens (PC/Desktop) */
     @media (min-width: 1024px) {
       .content {
-        max-width: 1000px; /* Increase width for larger screens */
+        max-width: 1000px;
       }
 
-      .box {
-        width: 60%; /* Make boxes wider on PC */
-        max-width: 600px; /* Increase max width */
+      .info-box {
+        width: 60%;
+        max-width: 600px;
       }
 
       .return-button {
-        font-size: 20px; /* Larger button text on PC */
+        font-size: 20px;
         padding: 20px 40px;
       }
     }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <div class="content">
     <h1>Info</h1>
 
-    <!-- About Section -->
-    <div class="box">
-      <h2>About Float</h2>
-      <p>
-        Float Cheat Menu is a cutting-edge tool designed to provide you with the most reliable and secure Gorilla Tag cheat solutions available. With a focus on safety, undetectability, and a user-friendly experience, Float is your go-to solution.
-      </p>
-    </div>
-
-    <!-- Status Box -->
-    <div class="box">
-      <h2>Status</h2>
-      <p><strong>Discord Server:</strong> <span class="online">Online</span></p>
-      <p><strong>Menu Status:</strong> <span class="undetected">UNDETECTED</span></p>
-    </div>
-
-    <!-- How-to Guide Section -->
-    <div class="box">
-      <h2>How to Use</h2>
-      <ol>
-        <li>Download the Float Menu from the Official Discord.</li>
-        <li>Put The Menu In Your Plugins Folder And Run Gorilla Tag</li>
-        <li>Open The Menu By Clicking Y On Your Controller & To Open The GUI Click The Float Logo In The Top Left.</li>
-      </ol>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="box faq">
-      <h2>FAQ</h2>
-
-      <h3>1. Where can I download the Float Menu?</h3>
-      <p>You can download the menu directly from our Official Discord server.</p>
-
-      <h3>2. What platforms are supported?</h3>
-      <p>The Float Menu currently supports Gorilla Tag on PC (Windows).</p>
-
-      <h3>3. Can I get banned for using the Float Menu?</h3>
-      <p>There’s always a risk when using cheats in online games. However, we work hard to make the menu undetectable to minimize risks.</p>
-
-      <h3>4. Who do I contact for support?</h3>
-      <p>You can reach out to our team through the support channel in the Official Discord server.</p>
+    <!-- Info Box -->
+    <div class="info-box">
+      <h3>About Float Cheat Menu</h3>
+      <p>Float Cheat Menu is a powerful cheat menu that offers a variety of features for gaming enthusiasts.</p>
     </div>
 
     <!-- Return Button -->
@@ -163,5 +118,59 @@
   <div class="footer">
     <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 5,
+          "random": true
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
