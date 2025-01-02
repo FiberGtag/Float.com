@@ -1,159 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits - Float Cheat Menu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; /* Ensure full screen height */
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px auto;
-      padding: 0 20px;
-      max-width: 1200px;
-      width: 100%;
-      flex-grow: 1; /* Allow content to take up remaining space */
-    }
-
-    h1 {
-      color: #fff;
-      margin-bottom: 30px;
-    }
-
-    .credit-box {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 400px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      border: 5px solid #888;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    .credit-box h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .credit-box p {
-      font-size: 16px;
-      color: #bbb;
-    }
-
-    .credit-box img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-right: 20px;
-      border: 5px solid #bbb;
-    }
-
-    .return-button {
-      text-decoration: none;
-      color: #fff;
-      background-color: #555;
-      padding: 15px 30px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 30px;
-      transition: background-color 0.3s ease;
-    }
-
-    .return-button:hover {
-      background-color: #808080;
-    }
-
-    .footer {
-      padding: 20px;
-      text-align: center;
-      color: #fff;
-      background-color: #000;
-      margin-top: 40px;
-      width: 100%;
-      position: relative;
-    }
-
-    /* Media query for large screens (PC/Desktop) */
-    @media (min-width: 1024px) {
-      .content {
-        max-width: 1000px;
-      }
-
-      .credit-box {
-        width: 60%;
-        max-width: 600px;
-      }
-
-      .return-button {
-        font-size: 20px;
-        padding: 20px 40px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="content">
-    <h1>Credits</h1>
-
-    <!-- Credit Boxes -->
-    <div class="credit-box">
-      <img src="https://i.ibb.co/N1pDFF8/your-image.jpg" alt="FiberGT">
-      <div>
-        <h3>FiberGT</h3>
-        <p><strong>Role:</strong> Owner</p>
-      </div>
-    </div>
-
-    <div class="credit-box">
-      <img src="https://i.ibb.co/4WpNzWq/another-image.jpg" alt="ThatGuy">
-      <div>
-        <h3>ThatGuy</h3>
-        <p><strong>Role:</strong> Co-Owner</p>
-      </div>
-    </div>
-
-    <div class="credit-box">
-      <img src="https://i.ibb.co/FKypGQ8/third-image.jpg" alt="Developer">
-      <div>
-        <h3>Developers</h3>
-        <p><strong>Role:</strong> Developer</p>
-      </div>
-    </div>
-
-    <div class="credit-box">
-      <img src="https://i.ibb.co/nj2rDRd/fourth-image.jpg" alt="Community">
-      <div>
-        <h3>Our Community</h3>
-        <p><strong>Role:</strong> Special Thanks</p>
-      </div>
-    </div>
-
-    <!-- Return Button -->
-    <a href="index.html" class="return-button">Return to Home</a>
-  </div>
 
   <div class="footer">
     <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 5,
+          "random": true
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
