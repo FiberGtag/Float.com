@@ -9,189 +9,183 @@
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      text-align: center;
       margin: 0;
       padding: 0;
     }
 
-    .navbar {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: #111;
-      padding: 20px 40px;
-      border-bottom: 1px solid #333;
-      position: relative;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-left: auto; /* Moves the nav buttons to the right */
-    }
-
-    .nav-button {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 20px;
-      background-color: #222;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .nav-button:hover {
-      background-color: #555;
-    }
-
-    .hero {
-      height: 80vh;
+    .content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #111, #222);
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      text-decoration: none;
-      color: #fff;
-      background-color: #007bff;
-      padding: 15px 30px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .cta-button:hover {
-      background-color: #0056b3;
-    }
-
-    .why-choose-us {
-      padding: 50px 20px;
-      background-color: #222;
-      text-align: center;
-    }
-
-    .why-choose-us h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .why-choose-us p {
-      font-size: 18px;
-      color: #ccc;
+      margin: 20px auto;
+      padding: 0 20px;
       max-width: 800px;
-      margin: 0 auto 20px auto;
     }
 
-    .features {
-      display: flex;
-      justify-content: space-around;
-      gap: 30px;
-      margin-top: 30px;
-      flex-wrap: wrap;
+    h1 {
+      margin-bottom: 30px;
+      color: #fff; /* Changed to white */
     }
 
-    .feature {
-      background-color: #333;
+    /* Add the fade-in and fade-out CSS */
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .fade-out {
+      animation: fadeOut 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    .box {
+      background-color: #222;
       color: #fff;
-      padding: 30px;
+      padding: 20px;
       border-radius: 10px;
-      width: 250px;
+      margin: 20px 10px;
       text-align: center;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 400px;
     }
 
-    .feature:hover {
-      transform: scale(1.1);
+    .box p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ccc;
     }
 
-    .feature h3 {
-      font-size: 24px;
+    .box .online {
+      color: #00ff00;
+    }
+
+    .box .undetected {
+      color: #00ff00;
+    }
+
+    ol {
+      text-align: left;
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+
+    ol li {
       margin-bottom: 10px;
     }
 
-    .feature p {
-      font-size: 16px;
-      color: #bbb;
+    .return-button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #555;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
 
+    .return-button:hover {
+      background-color: #808080;
+    }
+
+    /* Style for the footer */
     .footer {
+      background-color: #000;
+      color: #fff;
       padding: 20px;
       text-align: center;
-      color: #fff;
-      background-color: #111;
     }
 
-    /* Logo adjustment */
-    .navbar img {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 60px; /* Increase the size of the logo */
+    .page {
+      display: none;
     }
+
+    .page.active {
+      display: block;
+    }
+
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <!-- Logo Image -->
-    <img src="https://i.ibb.co/c1yqxbM/your-image.png" alt="Float Logo">
-
-    <div class="nav-buttons">
-      <a href="index.html" class="nav-button">Home</a>
-      <a href="info.html" class="nav-button">Info</a>
-      <a href="credits.html" class="nav-button">Credits</a>
+  <div id="home" class="page active fade-in">
+    <h1>Home Page</h1>
+    <div class="box">
+      <h2>Welcome to the Float Cheat Menu</h2>
+      <p>Access your cheat options for Gorilla Tag.</p>
     </div>
-  </header>
+    <button onclick="goToPage('credits')">Go to Credits</button>
+    <button onclick="goToPage('info')">Go to Info</button>
+  </div>
 
-  <section class="hero">
-    <h1>Welcome to Float</h1>
-    <p>Your ultimate cheat menu solution.</p>
-    <a href="https://discord.gg/bpehk7Tc" target="_blank" class="cta-button">Join Our Discord</a>
-  </section>
-
-  <section class="why-choose-us">
-    <h2>Why Choose Us?</h2>
-    <p>
-      Float offers the most reliable and feature-packed cheat menu available. With years of experience
-      and a dedicated team, we ensure top-notch performance and seamless integration for your needs.
-    </p>
-    <div class="features">
-      <div class="feature">
-        <h3>Undetected</h3>
-        <p>Our menu remains undetected, giving you a secure and uninterrupted experience.</p>
-      </div>
-      <div class="feature">
-        <h3>Safety</h3>
-        <p>Built with top-tier security to protect your accounts and data at all times.</p>
-      </div>
-      <div class="feature">
-        <h3>Free</h3>
-        <p>Experience all the features without any hidden costs. Our cheat menu is completely free!</p>
-      </div>
-      <div class="feature">
-        <h3>Reliability</h3>
-        <p>We have a proven track record of providing dependable and consistent service.</p>
-      </div>
+  <div id="credits" class="page">
+    <h1>Credits Page</h1>
+    <div class="box">
+      <h2>Credits</h2>
+      <p>Credits for the website go here!</p>
     </div>
-  </section>
+    <button onclick="goToPage('home')">Back to Home</button>
+  </div>
 
-  <section class="footer">
+  <div id="info" class="page">
+    <h1>Info Page</h1>
+    <div class="box">
+      <h2>About Float</h2>
+      <p>Float Cheat Menu is a cutting-edge tool designed to provide you with the most reliable and secure Gorilla Tag cheat solutions available.</p>
+    </div>
+    <div class="box">
+      <h2>Status</h2>
+      <p><strong>Discord Server:</strong> <span class="online">Online</span></p>
+      <p><strong>Menu Status:</strong> <span class="undetected">UNDETECTED</span></p>
+    </div>
+    <div class="box">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Download the Float Menu from the Official Discord.</li>
+        <li>Put the Menu in your Plugins Folder and Run Gorilla Tag.</li>
+        <li>Open the Menu by Clicking Y on your Controller.</li>
+      </ol>
+    </div>
+    <button onclick="goToPage('home')">Back to Home</button>
+  </div>
+
+  <div class="footer">
     <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
-  </section>
+  </div>
+
+  <script>
+    function goToPage(pageId) {
+      // Fade out current page
+      const currentPage = document.querySelector('.page.active');
+      currentPage.classList.add('fade-out');
+
+      // Wait for the fade-out animation to finish before switching pages
+      setTimeout(() => {
+        // Hide current page and remove the fade-out class
+        currentPage.classList.remove('active', 'fade-out');
+        
+        // Show the new page with fade-in effect
+        const nextPage = document.getElementById(pageId);
+        nextPage.classList.add('active', 'fade-in');
+      }, 1000); // Timeout should match the fade-out duration (1s)
+    }
+  </script>
 </body>
 </html>
