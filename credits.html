@@ -19,11 +19,12 @@
       align-items: center;
       margin: 20px auto;
       padding: 0 20px;
-      max-width: 800px;
+      max-width: 1200px;
+      width: 100%;
     }
 
     h1 {
-      color: #fff; /* Changed to white */
+      color: #fff;
       margin-bottom: 30px;
     }
 
@@ -34,21 +35,32 @@
       margin: 10px;
       border-radius: 10px;
       width: 80%;
-      max-width: 400px; /* Default width for mobile */
-      text-align: center;
+      max-width: 400px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      border: 5px solid #888; /* Gray border */
+      border: 5px solid #888;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      text-align: center;
     }
 
     .credit-box h3 {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #fff; /* Changed to white */
     }
 
     .credit-box p {
       font-size: 16px;
       color: #bbb;
+    }
+
+    .credit-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 5px solid #bbb; /* Gray outline */
     }
 
     .return-button {
@@ -78,16 +90,16 @@
     /* Media query for large screens (PC/Desktop) */
     @media (min-width: 1024px) {
       .content {
-        max-width: 1000px; /* Increase width for larger screens */
+        max-width: 1000px;
       }
 
       .credit-box {
-        width: 60%; /* Make boxes wider on PC */
-        max-width: 600px; /* Increase max width */
+        width: 60%;
+        max-width: 600px;
       }
 
       .return-button {
-        font-size: 20px; /* Larger button text on PC */
+        font-size: 20px;
         padding: 20px 40px;
       }
     }
@@ -99,23 +111,39 @@
 
     <!-- Credit Boxes -->
     <div class="credit-box">
-      <h3>FiberGT</h3>
-      <p><strong>Role:</strong> Owner</p>
+      <!-- Profile Picture on the Left -->
+      <img src="https://i.ibb.co/N1pDFF8/your-image.jpg" alt="FiberGT">
+      <div>
+        <h3>FiberGT</h3>
+        <p><strong>Role:</strong> Owner</p>
+      </div>
     </div>
 
     <div class="credit-box">
-      <h3>ThatGuy</h3>
-      <p><strong>Role:</strong> Co-Owner</p>
+      <!-- Profile Picture for the second box -->
+      <img src="https://i.ibb.co/4WpNzWq/second-image.jpg" alt="ThatGuy">
+      <div>
+        <h3>ThatGuy</h3>
+        <p><strong>Role:</strong> Co-Owner</p>
+      </div>
     </div>
 
     <div class="credit-box">
-      <h3>Developers</h3>
-      <p><strong>Role:</strong> Developer</p>
+      <!-- Profile Picture for the third box -->
+      <img src="https://i.ibb.co/FKypGQ8/new-image.jpg" alt="Developer">
+      <div>
+        <h3>Developer</h3>
+        <p><strong>Role:</strong> Developer</p>
+      </div>
     </div>
 
     <div class="credit-box">
-      <h3>Our Community</h3>
-      <p><strong>Role:</strong> Special Thanks</p>
+      <!-- Profile Picture for the last box -->
+      <img src="https://i.ibb.co/nj2rDRd/final-image.jpg" alt="Community">
+      <div>
+        <h3>Our Community</h3>
+        <p><strong>Role:</strong> Special Thanks</p>
+      </div>
     </div>
 
     <!-- Return Button -->
