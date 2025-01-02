@@ -1,130 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits - Float Cheat Menu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #111; /* Dark background for entire site */
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      position: relative;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #111;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid #333;
-    }
-
-    .nav-button {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 20px;
-      background-color: #222;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-button:hover {
-      background-color: #555;
-      transform: scale(1.1);
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      height: auto;
-      padding: 40px 20px;
-      background-color: #222; /* Contrast background for the content */
-    }
-
-    .content h1 {
-      font-size: 48px;
-      margin-bottom: 30px;
-    }
-
-    .credits-boxes {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .credit-box {
-      background-color: #333; /* Lighter background for each box */
-      color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      width: 200px; /* Box width */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .credit-box:hover {
-      transform: scale(1.05);
-    }
-
-    .credit-box h3 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
 
     .credit-box p {
-      font-size: 14px;
+      font-size: 16px;
       color: #bbb;
     }
 
-    .footer {
-      background-color: #111;
+    .return-button {
+      text-decoration: none;
       color: #fff;
+      background-color: #222;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 30px; /* Increased margin to move the button up */
+      transition: background-color 0.3s ease;
+    }
+
+    .return-button:hover {
+      background-color: #808080;
+    }
+
+    .footer {
       padding: 20px;
       text-align: center;
+      color: #fff;
+      background-color: #111;
+      margin-top: 40px; /* Added margin to give space between the button and footer */
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html" class="nav-button">Home</a>
-  </header>
-
   <div class="content">
-    <h1>Credits</h1>
-    <div class="credits-boxes">
-      <div class="credit-box">
-        <h3>FiberGT</h3>
-        <p><strong>Role:</strong> Owner</p>
-      </div>
-      <div class="credit-box">
-        <h3>ThatGuy</h3>
-        <p><strong>Role: </strong>Co-Owner</p>
-      </div>
-      <div class="credit-box">
-        <h3>Developers</h3>
-        <p><strong>   </strong> COMING SOON</p>
-      </div>
-      <div class="credit-box">
-        <h3>Our Community</h3>
-        <p><strong>Role:</strong> Special Thanks!</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
-  </div>
-</body>
-</html>
