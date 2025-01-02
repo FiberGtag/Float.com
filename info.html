@@ -23,8 +23,8 @@
     }
 
     h1 {
+      color: #fff; /* Changed to white */
       margin-bottom: 30px;
-      color: #fff;
     }
 
     .box {
@@ -63,6 +63,10 @@
       margin-bottom: 10px;
     }
 
+    .faq h3, .faq p {
+      color: #fff; /* Ensures FAQ text is white */
+    }
+
     .return-button {
       text-decoration: none;
       color: #fff;
@@ -93,33 +97,15 @@
         max-width: 1000px; /* Increase width for larger screens */
       }
 
-      h1 {
-        font-size: 3rem; /* Larger heading for bigger screens */
-      }
-
       .box {
-        width: 70%; /* Make boxes wider */
-        max-width: 600px;
+        width: 60%; /* Make boxes wider on PC */
+        max-width: 600px; /* Increase max width */
       }
 
       .return-button {
-        font-size: 20px; /* Larger text for button */
-        padding: 20px 40px; /* Larger button for better visibility */
+        font-size: 20px; /* Larger button text on PC */
+        padding: 20px 40px;
       }
-
-      .footer {
-        font-size: 18px; /* Increase font size of the footer text */
-      }
-    }
-
-    /* FAQ Section Styling */
-    .faq h3 {
-      color: #00ff00; /* Green color for FAQ question titles */
-      margin-bottom: 10px;
-    }
-
-    .faq p {
-      color: #ccc; /* White color for FAQ answers */
     }
   </style>
 </head>
