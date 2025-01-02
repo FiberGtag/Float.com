@@ -27,33 +27,6 @@
       color: #fff; /* Changed to white */
     }
 
-    /* Add the fade-in and fade-out CSS */
-    .fade-in {
-      animation: fadeIn 1s ease-out;
-    }
-
-    .fade-out {
-      animation: fadeOut 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeOut {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-    }
-
     .box {
       background-color: #222;
       color: #fff;
@@ -114,78 +87,21 @@
       text-align: center;
     }
 
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
-
   </style>
 </head>
 <body>
-  <div id="home" class="page active fade-in">
+  <div class="content">
     <h1>Home Page</h1>
     <div class="box">
       <h2>Welcome to the Float Cheat Menu</h2>
       <p>Access your cheat options for Gorilla Tag.</p>
     </div>
-    <button onclick="goToPage('credits')">Go to Credits</button>
-    <button onclick="goToPage('info')">Go to Info</button>
-  </div>
-
-  <div id="credits" class="page">
-    <h1>Credits Page</h1>
-    <div class="box">
-      <h2>Credits</h2>
-      <p>Credits for the website go here!</p>
-    </div>
-    <button onclick="goToPage('home')">Back to Home</button>
-  </div>
-
-  <div id="info" class="page">
-    <h1>Info Page</h1>
-    <div class="box">
-      <h2>About Float</h2>
-      <p>Float Cheat Menu is a cutting-edge tool designed to provide you with the most reliable and secure Gorilla Tag cheat solutions available.</p>
-    </div>
-    <div class="box">
-      <h2>Status</h2>
-      <p><strong>Discord Server:</strong> <span class="online">Online</span></p>
-      <p><strong>Menu Status:</strong> <span class="undetected">UNDETECTED</span></p>
-    </div>
-    <div class="box">
-      <h2>How to Use</h2>
-      <ol>
-        <li>Download the Float Menu from the Official Discord.</li>
-        <li>Put the Menu in your Plugins Folder and Run Gorilla Tag.</li>
-        <li>Open the Menu by Clicking Y on your Controller.</li>
-      </ol>
-    </div>
-    <button onclick="goToPage('home')">Back to Home</button>
+    <button onclick="window.location.href='credits.html'">Go to Credits</button>
+    <button onclick="window.location.href='info.html'">Go to Info</button>
   </div>
 
   <div class="footer">
     <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
   </div>
-
-  <script>
-    function goToPage(pageId) {
-      // Fade out current page
-      const currentPage = document.querySelector('.page.active');
-      currentPage.classList.add('fade-out');
-
-      // Wait for the fade-out animation to finish before switching pages
-      setTimeout(() => {
-        // Hide current page and remove the fade-out class
-        currentPage.classList.remove('active', 'fade-out');
-        
-        // Show the new page with fade-in effect
-        const nextPage = document.getElementById(pageId);
-        nextPage.classList.add('active', 'fade-in');
-      }, 1000); // Timeout should match the fade-out duration (1s)
-    }
-  </script>
 </body>
 </html>
