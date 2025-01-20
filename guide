@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Guide - Float Cheat Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensures particles are behind other elements */
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto;
+      padding: 0 20px;
+      max-width: 1200px;
+      width: 100%;
+      flex-grow: 1;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 12px;  /* Tiny font size */
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .credit-box {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      border: 5px solid #888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .credit-box h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .credit-box p {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .bold-text {
+      font-weight: bold;
+      font-size: 18px; /* Make bold text bigger */
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #000;
+      margin-top: 40px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Media query for large screens (PC/Desktop) */
+    @media (min-width: 1024px) {
+      .content {
+        max-width: 1000px;
+      }
+
+      .credit-box {
+        width: 90%; /* Increase the width to 90% */
+        max-width: 800px; /* Max width set to 800px */
+      }
+    }
+
+    /* Media query for larger PC/desktop screens */
+    @media (min-width: 1440px) {
+      .credit-box {
+        width: 70%; /* Increase to 70% of the screen width */
+        max-width: 1000px; /* Max width set to 1000px */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <h1>Menu Guide</h1>
+    <p class="subheading">A Guide On Various Things On Float Mod Menu To Learn Or Try</p>
+
+    <!-- Voice Commands Box -->
+    <div class="credit-box">
+      <div>
+        <h3>Voice Commands</h3>
+        <p><span class="bold-text">Our Mod Menu Provides A Nice Voice Command System To Use Our Menu Completely Through Your Voice. To Use It You Can Say The Following Things Such As:</span><br>Float, Jarvis, Google, Siri, Alexa, Computer, Console, Bitch, Fiber, ChatGPT, Goober & AI</p>
+      </div>
+    </div>
+
+    <!-- ThatGuy Box -->
+    <div class="credit-box">
+      <div>
+        <h3>GUIDE UPGRADE COMING SOON</h3>
+        <p>Stay tuned for future updates to the guide!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Float Cheat Menu. All rights reserved.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 5,
+          "random": true
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
